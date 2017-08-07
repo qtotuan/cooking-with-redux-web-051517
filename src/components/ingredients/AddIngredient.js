@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 export class AddIngredient extends Component {
-  render(){
-    return(
+
+  render() {
+    return (
       <div>
-        Ok
+        <button>{this.props.selectedIngredients}</button>
       </div>
     )
   }
 }
 
-export const ConnectedAddIngredient = AddIngredient
+
+
+export const ConnectedAddIngredient = connect()(AddIngredient)
